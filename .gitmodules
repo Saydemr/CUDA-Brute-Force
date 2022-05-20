@@ -1,0 +1,3 @@
+[submodule "pydictor"]
+	path = pydictor
+	url = https://github.com/LandGrey/pydictor.git
