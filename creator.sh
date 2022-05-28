@@ -1,3 +1,4 @@
+#!/bin/bash
 echo "Bash version ${BASH_VERSION}..."
 
 COMPLEXITY="d L Lc dLc"

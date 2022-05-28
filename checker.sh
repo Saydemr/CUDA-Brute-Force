@@ -1,36 +1,40 @@
+#!/bin/bash
 echo "Bash version ${BASH_VERSION}..."
 
-COMPLEXITY="d L Lc dLc"
+COMPLEXITY="dLcs"
 ENCODE="md5 sha1 sha256 sha512"
 
 for complexity in $COMPLEXITY
 do
-    if [[ $complexity -eq "d" ]]
+    if [[ $complexity == "d" ]]
     then
         charset="0123456789"
-    elif [[ $complexity -eq "L" ]]
+    elif [[ $complexity == "L" ]]
     then
         charset="abcdghijklmnopqrstuvwxyz"
-    elif [[ $complexity -eq "Lc" ]]
+    elif [[ $complexity == "Lc" ]]
     then
         charset="abcdghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
-    elif [[ $complexity -eq "dLc" ]]
+    elif [[ $complexity == "dLc" ]]
     then
         charset="abcdghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+    elif [[ $complexity == "dLcs" ]]
+    then
+        charset="abcdghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_+"
     fi
     
     for encode in $ENCODE
     do
-        if [[ $encode -eq "md5" ]]
+        if [[ $encode == "md5" ]]
         then
             type="0"
-        elif [[ $encode -eq "sha1" ]]
+        elif [[ $encode == "sha1" ]]
         then
             type="100"
-        elif [[ $encode -eq "sha256" ]]
+        elif [[ $encode == "sha256" ]]
         then
             type="1400"
-        elif [[ $encode -eq "sha512" ]]
+        elif [[ $encode == "sha512" ]]
         then
             type="1700"
         fi
