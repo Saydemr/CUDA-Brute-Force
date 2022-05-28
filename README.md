@@ -12,3 +12,38 @@ This is the repository of a course project about finding the time taken to brute
 ## Course Information
 - Superviser TA: [Majd Latah](https://github.com/majdlatah)
 - Course Instructor: [Ismail Ari](https://faculty.ozyegin.edu.tr/ismailari/)
+
+## HOW TO
+
+### Pre-requisites
+- Linux/Unix system capable of running bash scripts.
+- [Git](https://git-scm.com/download/linux)
+- [Hashcat](https://hashcat.net/hashcat/)
+- [CUDA](https://developer.nvidia.com/cuda-downloads?target_os=Linux) & OpenCL
+
+### Install Pre-requisites
+```
+sudo apt-get install -y git
+sudo apt-get install -y hashcat
+```
+Install CUDA Toolkit from the given link.
+
+### Clone the repository
+```
+git clone https://github.com/Saydemr/CUDA-Brute-Force.git && cd CUDA-Brute-Force
+git submodule init && git submodule update
+```
+
+### Create the hashes
+```
+chmod +x creator.sh
+./creator.sh
+```
+
+### Run the tests
+```
+chmod +x checker.sh
+./checker.sh
+```
+
+
