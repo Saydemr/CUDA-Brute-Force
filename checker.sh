@@ -40,7 +40,7 @@ do
             input_file="./${complexity}/selected_${encode}_${length}.txt"
             output_file="./${complexity}/selected_${encode}_${length}_out.txt"
             echo ${length}
-            mask_str=""           
+            mask_str=""
             
             for (( c=1; c<=${length}; c++ ))
             do
@@ -50,8 +50,7 @@ do
 
             while read -r line
             do
-                hashcat -a 3 -m 0 ${line} -1 ${charset} ${mask_str} -O -w 3 >> ${output_file} 2>&1 &
-                wait
+                hashcat -a 3 -m 0 ${line} -1 ${charset} ${mask_str} -O -w 3 >> ${output_file} 2>&1
             done < ${input_file}
             
         done
