@@ -17,9 +17,9 @@ This is the repository of a course project about finding the time taken to brute
 
 ### Pre-requisites
 - Linux/Unix system capable of running bash scripts.
-- [Git](https://git-scm.com/download/linux)
-- [Hashcat](https://hashcat.net/hashcat/)
-- [CUDA](https://developer.nvidia.com/cuda-downloads?target_os=Linux) & OpenCL
+- [Git](https://git-scm.com/download/linux) Latest
+- [Hashcat](https://hashcat.net/hashcat/) v6.2.5
+- [CUDA](https://developer.nvidia.com/cuda-downloads?target_os=Linux) v11.5 & OpenCL
 
 ### Install Pre-requisites
 ```
@@ -45,5 +45,3 @@ chmod +x creator.sh
 chmod +x checker.sh
 ./checker.sh
 ```
-
-
