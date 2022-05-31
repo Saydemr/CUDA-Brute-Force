@@ -52,11 +52,12 @@ do
             done
             echo ${mask_str}
 
-            while read -r line
+            file=$(cat $input_file)
+
+            for line in $file
             do
                 hashcat -a 3 -m ${type} ${line} -1 ${charset} ${mask_str} -O -w 3 >> ${output_file} 2>&1
-            done < ${input_file}
-            
+            done
         done
     done
 done
