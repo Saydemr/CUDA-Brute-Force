@@ -1,7 +1,7 @@
 #!/bin/bash
 echo "Bash version ${BASH_VERSION}..."
 
-COMPLEXITY="dLcs"
+COMPLEXITY="d L Lc dLc dLcs"
 ENCODE="md5 sha1 sha256 sha512"
 
 for complexity in $COMPLEXITY
@@ -20,7 +20,7 @@ do
         charset="abcdghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
     elif [[ $complexity == "dLcs" ]]
     then
-        charset="abcdghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_+"
+        charset="abcdghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_+.,-=[]{}|\;':<>/?~"
     fi
     
     for encode in $ENCODE
@@ -54,7 +54,7 @@ do
 
             while read -r line
             do
-                hashcat -a 3 -m 0 ${line} -1 ${charset} ${mask_str} -O -w 3 >> ${output_file} 2>&1
+                hashcat -a 3 -m ${type} ${line} -1 ${charset} ${mask_str} -O -w 3 >> ${output_file} 2>&1
             done < ${input_file}
             
         done
