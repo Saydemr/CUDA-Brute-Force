@@ -1,7 +1,7 @@
 #!/bin/bash
 echo "Bash version ${BASH_VERSION}..."
 
-COMPLEXITY="d L Lc dLc dLcs"
+COMPLEXITY="L Lc dLc dLcs"
 ENCODE="md5 sha1 sha256 sha512"
 
 for complexity in $COMPLEXITY
@@ -11,16 +11,16 @@ do
         charset="0123456789"
     elif [[ $complexity == "L" ]]
     then
-        charset="abcdghijklmnopqrstuvwxyz"
+        charset="abcdefghijklmnopqrstuvwxyz"
     elif [[ $complexity == "Lc" ]]
     then
-        charset="abcdghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+        charset="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
     elif [[ $complexity == "dLc" ]]
     then
-        charset="abcdghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+        charset="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
     elif [[ $complexity == "dLcs" ]]
     then
-        charset="abcdghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_+.,-=[]{}|\;':<>/?~"
+        charset="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_+.,-=[]{}|\;':<>/?~"
     fi
     
     for encode in $ENCODE
@@ -56,7 +56,7 @@ do
 
             for line in $file
             do
-                hashcat -a 3 -m ${type} ${line} -1 ${charset} ${mask_str} -O -w 3 >> ${output_file} 2>&1
+                hashcat -a 3 -m ${type} ${line} -1 ${charset} ${mask_str} -O -w 4 >> ${output_file} 2>&1
             done
         done
     done
