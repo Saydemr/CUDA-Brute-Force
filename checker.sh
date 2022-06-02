@@ -20,7 +20,7 @@ do
         charset="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
     elif [[ $complexity == "dLcs" ]]
     then
-        charset="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_+.,-=[]{}|\;':<>/?~"
+        charset="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789\!@#\$%^&*()_+.,-=[]{}|\\;':<>/?~\"\`"
     fi
     
     for encode in $ENCODE
