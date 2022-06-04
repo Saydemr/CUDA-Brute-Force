@@ -6,7 +6,7 @@ This is the repository of a course project about finding the time taken to brute
 - Institution: [Ozyegin University](https://www.ozyegin.edu.tr/en)
 
 ## Members
-- [MervegÃ¼l Parlak](https://github.com/ctllmp)
+- [Mervegul Parlak](https://github.com/ctllmp)
 - [Abdullah Saydemir](https://github.com/Saydemr)
 
 ## Course Information
