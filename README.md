@@ -6,11 +6,11 @@ This is the repository of a course project about finding the time taken to brute
 - Institution: [Ozyegin University](https://www.ozyegin.edu.tr/en)
 
 ## Members
-- [Mervegül Parlak](https://github.com/ctllmp)
+- [MervegÃ¼l Parlak](https://github.com/ctllmp)
 - [Abdullah Saydemir](https://github.com/Saydemr)
 
 ## Course Information
-- Superviser TA: [Majd Latah](https://github.com/majdlatah)
+- Supervisor TA: [Majd Latah](https://github.com/majdlatah)
 - Course Instructor: [Ismail Ari](https://faculty.ozyegin.edu.tr/ismailari/)
 
 ## HOW TO
@@ -24,9 +24,9 @@ This is the repository of a course project about finding the time taken to brute
 ### Install Pre-requisites
 ```
 sudo apt-get install -y git
-sudo apt-get install -y hashcat
 ```
 Install CUDA Toolkit from the given link.
+Install Hashcat from the given link.
 
 ### Clone the repository
 ```
@@ -35,12 +35,14 @@ git submodule init && git submodule update
 ```
 
 ### Create the hashes
+This takes time and requires a lot of disk space. You can use precomputed hashes from [here](https://drive.google.com/drive/folders/1GS69Dri1jtHbZu4Ypk7VMBoaJ6jWL3p_?usp=sharing).
 ```
 chmod +x creator.sh
 ./creator.sh
 ```
 
 ### Run the tests
+As the length and complexity increases, time to crack password also increase. You may press "s" to learn the estimated time and "q" to exit.
 ```
 chmod +x checker.sh
 ./checker.sh
